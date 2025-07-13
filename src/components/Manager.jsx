@@ -18,11 +18,11 @@ const Manager = () => {
 
     const showPassword = () => {
         passwordRef.current.type = "text";
-        if (ref.current.src.includes("icons/eyecross.png")) {
-            ref.current.src = "icons/eye.png";
+        if (ref.current.src.includes("/icons/eyecross.png")) {
+            ref.current.src = "/icons/eye.png";
             passwordRef.current.type = "password";
         } else {
-            ref.current.src = "icons/eyecross.png";
+            ref.current.src = "/icons/eyecross.png";
             passwordRef.current.type = "ref";
         }
     };
@@ -162,7 +162,7 @@ const Manager = () => {
                                 <img
                                     ref={ref}
                                     className="p-1"
-                                    src="icons/eye.png"
+                                    src="/icons/eye.png"
                                     alt="eye"
                                     width={26}
                                 />
