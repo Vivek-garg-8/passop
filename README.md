@@ -1,12 +1,77 @@
-# React + Vite
+# PassOP (LocalStorage Version) - Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This version of **PassOP** is a fully client-side React app that stores and manages website credentials directly in the browser using `localStorage`. It is perfect for offline use or simple demos.
 
-Currently, two official plugins are available:
+## 🔧 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* 🔐 Add, edit, and delete passwords
+* 🧠 All data stored in browser `localStorage`
+* 👁️ Toggle password visibility with eye icon
+* 📋 Copy to clipboard functionality
+* 🎨 Interactive icons via [Lordicon](https://lordicon.com/)
+* 🔔 User feedback via [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React
+* **Styling:** Tailwind CSS
+* **Icons:** Lordicon
+* **Notifications:** React Toastify
+* **Storage:** Browser `localStorage`
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js and npm installed
+
+### Setup Instructions
+
+```bash
+# Clone the repository
+$ git clone https://github.com/yourusername/passop.git
+
+# Go into the project directory
+$ cd passop
+
+# Install dependencies
+$ npm install
+
+# Start development server
+$ npm run dev
+```
+
+## 📁 Folder Structure
+
+```
+src/
+├── components/
+│   └── Manager.jsx   # Main password manager logic
+├── public/icons/     # Eye icons used for password visibility toggle
+├── App.jsx           # App wrapper
+├── main.jsx          # Entry point
+```
+
+## 🧪 Key Functionalities
+
+* **Form Handling:** Controlled form inputs with validation
+* **Password Toggle:** Eye icon toggles visibility using `useRef`
+* **Copy to Clipboard:** Copies values using `navigator.clipboard.writeText`
+* **Storage:** All passwords stored and retrieved from `localStorage`
+
+## ⚠️ Notes
+
+* Passwords are stored in plain text in localStorage. Do **not** use this for storing real or sensitive data.
+* No backend/server is required.
+
+## 🙌 Acknowledgments
+
+* [React](https://reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+* [Lordicon](https://lordicon.com/)
+* [uuid](https://www.npmjs.com/package/uuid)
+
+---
+
+This version is great for testing and learning. For production, consider switching to a secure backend with encryption support.
