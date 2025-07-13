@@ -235,7 +235,7 @@ const Manager = () => {
                                             </td>
                                             <td className=" py-2 border border-white text-center">
                                                 <div className="lordiconcopy flex justify-center items-center ">
-                                                    {item.password}
+                                                    {"*".repeat(item.password.length)}
                                                     <div className="size-7 cursor-pointer " onClick={() => { copyText(item.password) }}>
                                                         <lord-icon
                                                             style={{
